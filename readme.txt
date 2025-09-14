@@ -1,0 +1,1 @@
+az webapp deploy --resource-group Free-Websites --name hppytest --src-path . --type zip

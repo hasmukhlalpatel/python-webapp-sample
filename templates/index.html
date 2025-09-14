@@ -1,0 +1,27 @@
+<!-- templates/index.html -->
+{% extends "base.html" %}
+{% block content %}
+<h1>Welcome to {{ app_name }}! 🚀</h1>
+<div class="card">
+    <h2>About This App</h2>
+    <p>This is a sample Python Flask application that demonstrates:</p>
+    <ul>
+        <li>RESTful API endpoints</li>
+        <li>Task management functionality</li>
+        <li>Environment variable handling</li>
+        <li>Health monitoring</li>
+        <li>Responsive web interface</li>
+    </ul>
+    <p><strong>Current time:</strong> {{ timestamp }}</p>
+</div>
+
+<div class="card">
+    <h2>Quick API Test</h2>
+    <p>Try these endpoints:</p>
+    <ul>
+        <li><code>GET /api/tasks</code> - View all tasks</li>
+        <li><code>POST /api/tasks</code> - Create new task</li>
+        <li><code>GET /health</code> - Health check</li>
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+
+<!-- templates/info.html -->
+{% extends "base.html" %}
+{% block title %}App Information{% endblock %}
+{% block content %}
+<h1>Application Information 📊</h1>
+
+<div class="card">
+    <h2>Environment Variables</h2>
+    {% for key, value in env_vars.items() %}
+    <p><strong>{{ key }}:</strong> {{ value }}</p>
+    {% endfor %}
+</div>
+
+<div class="card">
+    <h2>Python Information</h2>
+    <p><strong>Python Version:</strong> {{ python_version }}</p>
+</div>
+
+<div class="card">
+    <h2>Available Endpoints</h2>
+    <ul>
+        <li><code>GET /</code> - Home page</li>
+        <li><code>GET /tasks</code> - Task management interface</li>
+        <li><code>GET /info</code> - This page</li>
+        <li><code>GET /health</code> - Health check</li>
+        <li><code>GET /api/tasks</code> - Get all tasks (JSON)</li>
+        <li><code>POST /api/tasks</code> - Create new task (JSON)</li>
+        <li><code>PUT /api/tasks/{id}</code> - Update task (JSON)</li>
+        <li><code>DELETE /api/tasks/{id}</code> - Delete task (JSON)</li>
+    </ul>
+</div>
+{% endblock %}
